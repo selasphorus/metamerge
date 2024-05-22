@@ -150,7 +150,7 @@ function merge_field_values ( $p1_val = null, $p2_val = null ) {
 
 // Function to merge duplicate records
 add_shortcode('merge_form', 'make_merge_form');
-function make_merge_form ($atts = [], $content = null, $tag = '') {
+function make_merge_form ( $atts = array(), $content = null, $tag = '' ) {
     
     // TS/logging setup
     $do_ts = devmode_active(); 
