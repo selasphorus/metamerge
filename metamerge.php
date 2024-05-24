@@ -29,7 +29,10 @@ $plugin_path = plugin_dir_path( __FILE__ );
 
 // Function to identify possible duplicates
 // WIP -- not functional!
-function get_possible_duplicate_posts( $post_id = null, $return = 'all' ) {
+/*
+$single -- bool -- optional -- Whether to return a single value or array of all vals
+*/
+function get_possible_duplicate_posts( $post_id = null, $single = false ) {
 
 	$info = null; // init
 	
@@ -86,7 +89,7 @@ function get_possible_duplicate_posts( $post_id = null, $return = 'all' ) {
     // Loop through the records returned 
     if ( $related_posts ) {
         
-        if ( $return == 'single' ) {
+        if ( $single ) {
             // TODO: simplify -- shouldn't really need a loop here...
             while ( $related_posts->have_posts() ) {            
                 $related_posts->the_post();
