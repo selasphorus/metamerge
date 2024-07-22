@@ -23,9 +23,7 @@ if ( !function_exists( 'add_action' ) ) {
 	exit;
 }
 
-$plugin_path = plugin_dir_path( __FILE__ );
-
-
+//$plugin_path = plugin_dir_path( __FILE__ );
 
 // Function to identify possible duplicates
 // WIP -- not functional!
